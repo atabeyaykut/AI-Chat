@@ -207,7 +207,7 @@ button:disabled {
 /* Form styles */
 form {
     max-width: 400px;
-    margin: 80px auto 20px;
+    margin: 0 auto;
     padding: 2rem;
     background-color: #2d2d2d;
     border-radius: 12px;
@@ -314,4 +314,14 @@ form input:invalid:focus {
     display: flex;
     gap: 1rem;
     justify-content: center;
+}
+
+/* Register page container */
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    margin-top: 80px;
+    padding: 2rem;
 }

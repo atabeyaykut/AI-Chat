@@ -44,52 +44,54 @@ function Register() {
     });
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div>
-                <label>Username</label>
-                <input
-                    type="text"
-                    placeholder="Username"
-                    {...register("username", { required: "How can I call you?" })}
-                />
-                {errors.username && <p>{errors.username.message}</p>}
-            </div>
-            <div>
-                <label>Password</label>
-                <input
-                    type="password"
-                    placeholder="Password"
-                    {...register("password", {
-                        required: "Please enter a password",
-                        minLength: {
-                            value: 3,
-                            message: "Minimum 3 characters please"
-                        },
-                        pattern: {
-                            value: /^(?=.*[a-z])(?=.*[A-Z]).{3,}$/,
-                            message: "One uppercase and one lowercase letter"
-                        }
-                    })}
-                />
-                {errors.password && <p>{errors.password.message}</p>}
-            </div>
-            <div>
-                <label>Email</label>
-                <input
-                    type="email"
-                    {...register("email", {
-                        required: "I need your email",
-                        pattern: {
-                            value: /\S+@\S+\.\S+/,
-                            message: "Please enter a valid email"
-                        }
-                    })}
-                    placeholder="example@example.com"
-                />
-                {errors.email && <p>{errors.email.message}</p>}
-            </div>
-            <button type="submit">Register</button>
-        </form>
+        <div className="register-container">
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <div>
+                    <label>Username</label>
+                    <input
+                        type="text"
+                        placeholder="Username"
+                        {...register("username", { required: "How can I call you?" })}
+                    />
+                    {errors.username && <p>{errors.username.message}</p>}
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        {...register("password", {
+                            required: "Please enter a password",
+                            minLength: {
+                                value: 3,
+                                message: "Minimum 3 characters please"
+                            },
+                            pattern: {
+                                value: /^(?=.*[a-z])(?=.*[A-Z]).{3,}$/,
+                                message: "One uppercase and one lowercase letter"
+                            }
+                        })}
+                    />
+                    {errors.password && <p>{errors.password.message}</p>}
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        {...register("email", {
+                            required: "I need your email",
+                            pattern: {
+                                value: /\S+@\S+\.\S+/,
+                                message: "Please enter a valid email"
+                            }
+                        })}
+                        placeholder="example@example.com"
+                    />
+                    {errors.email && <p>{errors.email.message}</p>}
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
     )
 }
 
