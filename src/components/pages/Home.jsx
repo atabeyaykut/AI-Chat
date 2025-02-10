@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useUser } from '../../contextAPI/UserContext.jsx'
+import { useUser } from '@/context/UserContext'
 
 function Home() {
     const { isAuthenticated, user, logout, login } = useUser();

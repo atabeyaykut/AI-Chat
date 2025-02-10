@@ -1,5 +1,5 @@
 import React from "react";
-import { useUser } from "../../contextAPI/UserContext.jsx";
+import { useUser } from '@/context/UserContext'
 
 const Login = () => {
     const { isAuthenticated, logout, username } = useUser();
