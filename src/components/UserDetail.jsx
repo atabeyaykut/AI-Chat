@@ -1,5 +1,5 @@
 import React from 'react'
-import { useUser } from '../contextAPI/UserContext'
+import { useUser } from '../contextAPI/UserContext.jsx'
 
 function UserDetail() {
     const { user, logout } = useUser()

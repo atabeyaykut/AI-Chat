@@ -7,7 +7,7 @@ import Home from './components/pages/Home'
 import Register from './components/pages/Register'
 import Chat from './components/pages/Chat'
 import Footer from './components/Footer'
-import { UserProvider } from './contextAPI/UserContext'
+import { UserProvider } from './contextAPI/UserContext.jsx'
 
 const queryClient = new QueryClient()
 

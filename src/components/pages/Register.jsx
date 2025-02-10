@@ -4,7 +4,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
-import { useUser } from '../../contextAPI/UserContext';
+import { useUser } from '../../contextAPI/UserContext.jsx'
 
 function Register() {
     const { login } = useUser();

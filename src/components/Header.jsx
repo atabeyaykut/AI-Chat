@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import UserDetail from './UserDetail'
-import { useUser } from '../contextAPI/UserContext'
+import { useUser } from '../contextAPI/UserContext.jsx'
 
 function Header() {
     const [isValid, setIsValid] = useState(false)
