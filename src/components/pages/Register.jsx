@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useMutation } from '@tanstack/react-query';
-import { useUser } from '../../contextAPI/UserContext';
 import { useNavigate } from 'react-router-dom';
+import { useUser } from '../../contextAPI/UserContext';
 
 function Register() {
     const { login } = useUser();
